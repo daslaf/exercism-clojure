@@ -1,1 +1,0 @@
-Hola que tal, bienvenides a un nuevo episodio de Aprendiendo Clojure en Exercism. En esta oportunidad vamos a intentar resolver el desafío número <#insert_number>, llamado <#insert_title>.
