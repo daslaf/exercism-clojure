@@ -1,0 +1,33 @@
+(sqrt 4)
+(clojure.math
+(clojure.math)
+clojure.math
+(1)
+(java.lang.Math)
+java.lang.Math
+(java.lang.Math.sqrt 4)
+(.sqrt java.lang.Math 4)
+(java.lang.Math/sqrt 4)
+(+ [ 1 2 ] [3 4])
+(/ 1 2)
+(/. 1 2)
+(./ 1 2)
+(float (/ 1 2))
+(mapv inc [1 2 3])
+(require 'complex-numbers :reload)
+(complex-numbers/div [1 2]  [3 4])
+(= [0.44 0.08] [0.44 0.08])
+(complex-numbers/div [1 2]  [3 4])
+(= [0.44 0.08] (complex-numbers/div [1 2]  [3 4]))
+0.44
+0.08
+(= ([0.44 0.08] 0) ((complex-numbers/div [1 2]  [3 4]) 0))
+(= ([0.44 0.08] 1) ((complex-numbers/div [1 2]  [3 4]) 1))
+(0 (complex-numbers/div [1 2]  [3 4]))
+((complex-numbers/div [1 2]  [3 4]) 0)
+(= 0.44 ((complex-numbers/div [1 2]  [3 4]) 0))
+(type 1)
+(type 0.44)
+(= 0.44 ((complex-numbers/div [1 2]  [3 4]) 0))
+(double 1)
+(map + [1 2] [3 4])

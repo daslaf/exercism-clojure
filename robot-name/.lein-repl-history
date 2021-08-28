@@ -1,0 +1,107 @@
+ (def my-atom (atom 0))
+(reset! my-atom 4)
+@my-atom
+(require 'robot-name :reload)
+(robot-name/robot) 
+(def a (robot-name/robot))
+a
+@a
+(robot-name/robot) 
+(require 'robot-name :reload)
+(def a (robot-name/robot))
+(robot-name/robot-name a)
+(require 'robot-name :reload)
+(def a (robot-name/robot))
+@a
+(require 'robot-name :reload)
+(robot-name/robot-name a)
+(robot-name/reset-name a)
+(require 'robot-name :reload)
+@a
+(robot-name/reset-name a)
+@a
+java.lang.Char
+java.lang.String
+java.lang.String/
+java.lang.String/codePointAt
+(.codePointAt "A")
+(java.lang.String/codePointAt "A")
+((.codePointAt 0) "A")
+(.codePointAt 0 "A")
+(find-doc "character")
+(java-doc codePointAt)
+(javadoc codePointAt)
+(javadoc String)
+(.charAt 0 "ABC")
+((.charAt 0) "ABC")
+(.charAt 0 "ABC")
+(.charAt "ABC" 0)
+(.codePointAt "ABC" 0)
+(String. 65)
+(java.lang.String. 65)
+(.char \c)
+\c
+(.charValue \A)
+(.getNumericValue \A)
+(.getNumericValue 65)
+(.getNumericValue 65 \A)
+5 \A)
+(java.lang.Character/toChars 65)
+(str "" (java.lang.Character/toChars 65))
+(java.lang.String. (java.lang.Character/toChars 65))
+(range 65 91)
+(rand-int 65 91)
+(rand-nth (range 65 91))
+(rand-int 9)
+(rand-int 10)
+(format "%03d" 9) 
+(format "%03d" 909) 
+(repeat "a" 2)
+(repeat 2 "a")
+(require 'robot-name :reload)
+(robot-name/generate-name)
+(conj #{1 2 3} 3)
+(conj #{1 2 3} 4)
+(nil? (#{1 2 3} 4))
+(nil? (#{1 2 3} 3))
+(true? (#{1 2 3} 3))
+(true? 1)
+(true? true)
+(if 1 2 3)
+(if nil 2 3)
+(require 'robot-name :reload)
+(gen)
+(robot-name/gen)
+(robot-name/generate-name)
+(require 'robot-name :reload)
+(robot-name/generate-name)
+name-cache
+robot-name/name-cache
+(robot-name/name-cache)
+(robot-name/name-cache "FO123")
+@robot-name/name-cache
+(require 'robot-name :reload)
+(robot-name/generate-name)
+@roboto-name/name-cache
+@robot-name/name-cache
+(robot-name/generate-name)
+(require 'robot-name :reload)
+@robot-name/name-cache
+(robot-name/generate-name)
+@robot-name/name-cache
+(robot-name/generate-name)
+@robot-name/name-cache
+(robot-name/generate-name)
+@robot-name/name-cache
+(def a (robot-name/robot))
+a
+@a
+(robot-name/reset-name a)
+(require 'robot-name :reload)
+@a
+(robot-name/reset-name a)
+(require 'robot-name :reload)
+(robot-name/reset-name a)
+@a
+(take 3 (shuffle (seq  "ABCDEFGHIJKLMNOPQRSTUVWXYZ")))
+(char 65)

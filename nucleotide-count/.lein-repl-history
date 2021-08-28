@@ -1,0 +1,5 @@
+(require 'nucleotide-count :reload)
+(nucleotide-count/count-of-nucleotide-in-strand \A "AAA")
+(nucleotide-count/count-of-nucleotide-in-strand \A "ACAB")
+(nucleotide-count/count-of-nucleotide-in-strand \B "ACAB")
+(nucleotide-count/count-of-nucleotide-in-strand \C "CCCCC")

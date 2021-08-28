@@ -1,0 +1,102 @@
+(trim "    ")
+(clojure.string/trim "  aa \n foo")
+(clojure.string/trim "  aa \n foo\t\t\n\t")
+(require '(bob))
+bob
+(defn response-for [s]
+  (let [trimmed (st/trim s)] (println trimmed))
+)
+(ns bob
+  (:require [clojure.string :as st]))
+(defn response-for [s]
+  (let [trimmed (st/trim s)] (println trimmed))
+)
+response-for
+(response-for " a a    aeqwe ")
+(response-for "\t\t\t\ta a    aeqwe ")
+"\n\n\n\t\t\tsadasda asd a"
+st
+(st/ends-with? "foo" "oo")
+(st/ends-with? "foo" "oof")
+(defn upper? [s] (= s (st/upper-case s)))
+(upper? "foo")
+(upper? "fOo")
+(upper? "FOO")
+(true? false)
+true?
+(if true 1 2)
+(re-find #"\d+" "abc12345def")
+(re-find #"[a-zA-Z]+" "abc12345def")
+(def matcher (re-matcher #"[a-zA-Z]+" "Go 1 23 GO ~!! :"))
+(re-find matcher)
+(def matcher (re-matcher #"[a-zA-Z]+" "Go 1 23 GO ~!! :"))
+(into () (re-find matcher))
+(def matcher (re-matcher #"[a-zA-Z]+" "Go 1 23 GO ~!! :"))
+(defn find-all [] (def matcher (re-matcher #"[a-zA-Z]+" "Go 1 23 GO ~!! :"))
+(defn find-all [matcher & [s]]
+  (let [sub (re-find matcher)] 
+    (if (nil? sub)
+      s
+      (find-all matcher (str (or s "") sub)))))
+(find-all (re-matcher #"[a-zA-Z]+" "Go 1 23 GO ~!! :"))
+(defn find-all [matcher & [s]]
+  (let [sub (re-find matcher)]
+    (if (nil? sub)
+      (or s "")
+      (find-all matcher (str (or s "") sub)))))
+(find-all (re-matcher #"[a-zA-Z]+" "1, 2, 3"))
+:yell
+{:yell 1}
+{:yell 1, :question 2}
+{:yell 1 :question 2}
+(:yell {:yell 1 :question 2})
+({:yell 1 :question 2} :yell)
+(st/blank? "        ")
+(st/blank? "     asda   ")
+(st/blank? "\r\n")
+(last "asdas")
+(last "asdas     ")
+(re-seq #"[a-zA-Z]+" "asd 1 1as ;';' czxc 231A SDASD cas CASD
+")
+(defn find-all [matcher & [s]]
+  (let [sub (re-find matcher)]
+    (if (nil? sub)
+      (or s "")
+      (find-all matcher (str (or s "") sub)))))
+(find-all #"[a-zA-Z]+" "asd 1 1as ;';' czxc 231A SDASD cas CASD")
+(find-all (re-matcher #"[a-zA-Z]+" "asd 1 1as ;';' czxc 231A SDASD cas CASD"))
+(apply str (re-seq #"[a-zA-Z]+" "asd 1 1as ;';' czxc 231A SDASD cas CASD"))
+(re-seq #"[a-zA-Z]+" "AS asd 12AS ;[")
+(length "123")
+(size "123")
+(clojure.string/size "123")
+(clojure.string/length "123")
+(.length "123")
+(.length "00123")
+clojure.contrib.math
+clojure.string
+(clojure.contrib.math/add 1 2)
+(string 123)
+(str "" 123)
+(seq "123)
+")
+(map Integer/parseInt "1234")
+(Integer/parseInt "1")
+(map #(Integer/parseInt %1) "1234")
+(map (fn [n] (Integer/parseInt n)) "1234")
+(map (fn [n] (Integer/parseInt (str "" n))) "1234")
+(map (fn [n] (Integer/parseInt (format "%d" n))) "1234")
+(map (fn [n] (Integer/parseInt (format "%c" n))) "1234")
+(defn armstrong? [num] ;; <- arglist goes here
+  ;; your code goes here
+  (let [num-string (str "" num)
+        len        (.length num-string)]
+    (map (fn [n] (Integer/parseInt (format "%c" n))) num-string))
+)
+(armstrong? "1234")]
+(armstrong? "1234")
+(defn armstrong? [num]
+  (let [num-string (str "" num)
+        len        (.length num-string)]
+    (= num
+     (reduce #(+ %1 (math/expt %2 len)) 0 (map (fn [n] (Integer/parseInt (format "%c" n))) num-string)))))

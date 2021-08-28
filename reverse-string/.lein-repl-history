@@ -1,0 +1,24 @@
+reverse-string
+(require '[reverse-string :as rs])
+rs
+(require [reverse-string :as rs])
+(require '(reverse-string :as rs))
+(require '[reverse-string.core :as rs])
+(require '[reverse_string.core :as rs])
+(require '[reverse_-tring :as rs])
+(require '[reverse-string :as rs])
+rs
+(require 'reverse-string)
+reverse-string
+reverse.string
+(require 'reverse.string)
+(require 'reverse_string)
+reverse_string
+(use 'reverse-string :reload)
+reverse-string
+(reverse-string/reverse-string "fooo")
+(use '[reverse-string :as rs] :reload)
+rs
+(use [reverse-string :as rs] :reload)
+(use ['reverse-string :as rs] :reload)
+(use ('reverse-string :as rs) :reload)

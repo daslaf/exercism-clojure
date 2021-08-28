@@ -1,0 +1,4 @@
+(range 1 10)
+(require 'grains :reload)
+(time (grains/total))
+(time (grains/total2))

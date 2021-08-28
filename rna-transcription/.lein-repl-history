@@ -1,0 +1,6 @@
+(require ['rna-transcription :as rna])
+(require [rna-transcription :as rna])
+(require '[rna-transcription :as rna])
+(rna/to-rna "G")
+(require '[rna-transcription :as rna] :reload)
+(rna/to-rna "G")
